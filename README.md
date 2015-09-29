@@ -1,1 +1,1 @@
-# npm-web-scraper
+# node-web-scraper

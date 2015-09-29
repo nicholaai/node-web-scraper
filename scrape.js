@@ -27,7 +27,11 @@ function file() {
     return b.count - a.count;
   });
 
-  console.log(words.slice(0, 20));
+  var keywords = words.slice(0, 20);
+
+  fs.writeFile('output.json', JSON.stringify(keywords, null, 4), function(error) {
+    console.log('File successfully written! - Check your project directory for the output');
+  });
 }
 
 var searchFile = fs.readFileSync('words.txt', 'utf8', function(error, data) {
